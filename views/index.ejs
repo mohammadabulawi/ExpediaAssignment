@@ -108,67 +108,71 @@
   <div class="container">
 
     <% hotels.forEach(function(item){ %>
-      <div class="card" style="width:200px">
-
-        <div class="card-body">
-          <a class="card-title" target="_blank" href="<%=decodeURIComponent(item.hotelUrls.hotelInfositeUrl)%>">
-            <%= item.hotelInfo.hotelName %> 
-          </a>
-          <a target="_blank" href="<%=decodeURIComponent(item.hotelUrls.hotelInfositeUrl)%>">
-            <img class="card-img-left" src="<%= item.hotelInfo.hotelImageUrl %>" alt=" Card image " style="width:100% ">
-           </a>
-
-          <p class="card-text ">
-            <span>Country: </span>
-            <span>
-              <%= item.destination.country%>
-            </span>
-          </p>
-          <p class="card-text ">
-            <span>City: </span>
-            <span>
-              <%= item.destination.city%>
-            </span>
-          </p>
-          <p class="card-text ">
-            <span>Rate: </span>
-            <span>
-              <%= item.hotelInfo.hotelStarRating %>
-            </span>
-          </p>
-          <p class="card-text ">
-            <span>Guest Review Rating: </span>
-            <span>
-              <%= item.hotelInfo.hotelGuestReviewRating %>
-            </span>
-          </p>
-          <p class="card-text ">
-            <span>Total Review Rating: </span>
-            <span>
-              <%= item.hotelInfo.hotelReviewTotal %>
-            </span>
-          </p>
-          <p class="card-text ">
-            <span>Hotel Star Rating: </span>
-            <span>
-              <%= item.hotelInfo.hotelReviewTotal %>
-            </span>
-          </p>
-          <p class="card-text ">
-              <span>avg/night: </span>
-              <span>
-                <%= item.hotelPricingInfo.averagePriceValue %>
-              </span>
-              <span>$</span>
-            </p>
-
+      <div class="row top-buffer" style="width:600px">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-block">
+              <a class="card-title" target="_blank" href="<%=decodeURIComponent(item.hotelUrls.hotelInfositeUrl)%>">
+                <%= item.hotelInfo.hotelName %>
+              </a>
+              <p class="card-text ">
+                <b>Country: </b>
+                <span>
+                  <%= item.destination.country%>
+                </span>
+              </p>
+              <p class="card-text ">
+                <b>City: </b>
+                <span>
+                  <%= item.destination.city%>
+                </span>
+              </p>
+              <p class="card-text ">
+                <b class="rating-num">Rate: </b>
+                <span>
+                  <%= item.hotelInfo.hotelStarRating %>
+                </span>
+              </p>
+              <p class="card-text ">
+                <b>Guest Review Rating: </b>
+                <span>
+                  <%= item.hotelInfo.hotelGuestReviewRating %>
+                </span>
+              </p>
+              <p class="card-text ">
+                <b>Total Review Rating: </b>
+                <span>
+                  <%= item.hotelInfo.hotelReviewTotal %>
+                </span>
+              </p>
+              <p class="card-text ">
+                <b>Hotel Star Rating: </b>
+                <span>
+                  <%= item.hotelInfo.hotelStarRating %>
+                </span>
+              </p>
+              <p class="card-text ">
+                <b>avg/night: </b>
+                <span>
+                  <%= item.hotelPricingInfo.averagePriceValue %>
+                </span>
+                <span>$</span>
+              </p>
+            </div>
+          </div>
         </div>
-                </div>
-                <hr size="60 ">
+        <div class="col-md-6">
+          <a target="_blank" href="<%=decodeURIComponent(item.hotelUrls.hotelInfositeUrl)%>">
+          <img class="card-img-bottom" src="<%= item.hotelInfo.hotelImageUrl %>" alt=" Card image " style="width:50% ">
+        </a>
+        </div>
+      </div>
+  <hr size="60">
 
-        <% }); %>
-  </div>
-  <footer class="container-fluid ">
+  <% }); %>
+</div>
+  
+    <footer class="container-fluid ">
     </footer>
 </body>
 
