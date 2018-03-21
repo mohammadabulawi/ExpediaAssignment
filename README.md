@@ -1,6 +1,6 @@
 - Node.js assignment for Expedia based on Hiba email.
 
-- Pure node.js without any js libraries, using ejs view engine
+- Pure node.js without any js libraries, using ejs view engine with bootstrap css lib.
 
 - Demo https://expediahotels2018.herokuapp.com/index
 
