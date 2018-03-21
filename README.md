@@ -11,4 +11,4 @@
 
 - Regarding to the search form inside hotels page: 
   all files are required because the api does not handle the null values. 
-  example: if we don't pass Destination, the API don't assume that we want all the hotel destinations.
+  example: if we don't pass Destination as a null value, the API don't assume that we want all the hotel destinations.
