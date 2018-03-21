@@ -4,4 +4,4 @@ in the terminal write npm install then npm start=> it is going to start the dev 
 
 the defult page is the index.js Which renders the hotels list
 
-regarding to the search form inside index.ejs => all files are required because the api does not handle the null values. example: if we don't pass Destination, the API don't assume that we w
+regarding to the search form inside index.ejs => all files are required because the api does not handle the null values. example: if we don't pass Destination, the API don't assume that we want all the hotel destinations.
